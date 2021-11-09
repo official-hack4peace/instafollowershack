@@ -611,12 +611,6 @@ menu() {
 printf "\n"
 printf " \e[1;31m[\e[0m\e[1;77m01\e[0m\e[1;31m]\e[0m\e[1;93m Unfollow Tracker\e[0m\n"
 printf " \e[1;31m[\e[0m\e[1;77m02\e[0m\e[1;31m]\e[0m\e[1;93m Increase Followers\e[0m\n"
-printf " \e[1;31m[\e[0m\e[1;77m03\e[0m\e[1;31m]\e[0m\e[1;93m Download Stories\e[0m\n"
-printf " \e[1;31m[\e[0m\e[1;77m04\e[0m\e[1;31m]\e[0m\e[1;93m Download Saved Content\e[0m\n"
-printf " \e[1;31m[\e[0m\e[1;77m05\e[0m\e[1;31m]\e[0m\e[1;93m Download Following List\e[0m\n"
-printf " \e[1;31m[\e[0m\e[1;77m06\e[0m\e[1;31m]\e[0m\e[1;93m Download Followers List\e[0m\n"
-printf " \e[1;31m[\e[0m\e[1;77m07\e[0m\e[1;31m]\e[0m\e[1;93m Download Profile Info\e[0m\n"
-printf " \e[1;31m[\e[0m\e[1;77m08\e[0m\e[1;31m]\e[0m\e[1;93m Activate Unfollower\e[0m\n"
 printf "\n"
 
 
@@ -624,10 +618,48 @@ read -p $' \e[1;31m[\e[0m\e[1;77m::\e[0m\e[1;31m]\e[0m\e[1;77m Choose an option:
 
 if [[ $option -eq 1 ]]; then
 login_user
-increase_followers
+track_unfollowers
 
 elif [[ $option -eq 2 ]]; then
-esc
+login_user
+increase_followers
+
+elif [[ $option -eq 3 ]]; then
+login_user
+get_story
+elif [[ $option -eq 4 ]]; then
+login_user
+get_saved
+elif [[ $option -eq 5 ]]; then
+login_user
+default_user=$user
+
+ 
+read -p $'\e[1;31m[\e[0m\e[1;77m+\e[0m\e[1;31m]\e[0m\e[1;93m Account (leave it blank to use your account): \e[0m' user_account
+
+user_account="${user_account:-${default_user}}"
+get_following
+elif [[ $option -eq 6 ]]; then
+
+login_user
+default_user=$user
+
+ 
+read -p $'\e[1;31m[\e[0m\e[1;77m+\e[0m\e[1;31m]\e[0m\e[1;93m Account (leave it blank to use your account): \e[0m' user_account
+
+user_account="${user_account:-${default_user}}"
+total_followers
+
+
+elif [[ $option -eq 7 ]]; then
+login_user
+get_info
+
+elif [[ $option -eq 8 ]]; then
+
+login_user
+unfollower
+
 else
 
 printf "\e[1;93m[!] Invalid Option!\e[0m\n"
