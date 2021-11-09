@@ -1,5 +1,12 @@
 # colour
-
+red="\e[91m"
+rset="\e[0m"
+grn="\e[92m"
+ylo="\e[93m"
+blue="\e[94m"
+cyan="\e[96m"
+p="\e[95m"
+#script
 string4=$(openssl rand -hex 32 | cut -c 1-4)
 string8=$(openssl rand -hex 32  | cut -c 1-8)
 string12=$(openssl rand -hex 32 | cut -c 1-12)
@@ -17,7 +24,7 @@ ig_sig="4f8732eb9ba7d1c8e8897a75d6474d4eb3f5279137431b2aafb71fafe2abe178"
 
 banner() {
 printf " \n"
-printf '''$  _____              _          
+printf '''$p  _____              _          
              |_   _|            | |         
                | |   _ __   ___ | |_   __ _ 
                | |  |  _ \ / __|| __| / _  |
@@ -35,9 +42,9 @@ printf '''$  _____              _
                | |_| |  __ _   ___ | | __
                |  _  | / _  | / __|| |/ /
                | | | || (_| || (__ |   < 
-               \_| |_/ \__ _| \___||_|\_\'''
+               \_| |_/ \__ _| \___||_|\_\$rset'''
                            
-                           
+printf "$ylo        created by hack4peace$rset"                       
 
 }
 
