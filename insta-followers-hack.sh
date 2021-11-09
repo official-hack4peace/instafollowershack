@@ -24,7 +24,7 @@ ig_sig="4f8732eb9ba7d1c8e8897a75d6474d4eb3f5279137431b2aafb71fafe2abe178"
 
 banner() {
 printf " \n"
-printf '''$pink    _____              _          
+printf '''\e[95m    _____              _          
              |_   _|            | |         
                | |   _ __   ___ | |_   __ _ 
                | |  |  _ \ / __|| __| / _  |
@@ -42,9 +42,9 @@ printf '''$pink    _____              _
                | |_| |  __ _   ___ | | __
                |  _  | / _  | / __|| |/ /
                | | | || (_| || (__ |   < 
-               \_| |_/ \__ _| \___||_|\_\$rset'''
+               \_| |_/ \__ _| \___||_|\_\\e[0m'''
                            
-printf "$ylo        created by hack4peace$rset"                       
+printf "$ylo                                          created by hack4peace$rset"                       
 
 }
 
@@ -660,7 +660,7 @@ unfollower
 
 else
 
-printf "$red[!] Invalid Option!$rset"
+printf "\e[91m Invalid Option!!\e[0m""
 sleep 2
 menu
 
