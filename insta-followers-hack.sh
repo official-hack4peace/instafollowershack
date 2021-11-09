@@ -624,48 +624,10 @@ read -p $' \e[1;31m[\e[0m\e[1;77m::\e[0m\e[1;31m]\e[0m\e[1;77m Choose an option:
 
 if [[ $option -eq 1 ]]; then
 login_user
-track_unfollowers
-
-elif [[ $option -eq 2 ]]; then
-login_user
 increase_followers
 
-elif [[ $option -eq 3 ]]; then
-login_user
-get_story
-elif [[ $option -eq 4 ]]; then
-login_user
-get_saved
-elif [[ $option -eq 5 ]]; then
-login_user
-default_user=$user
-
- 
-read -p $'\e[1;31m[\e[0m\e[1;77m+\e[0m\e[1;31m]\e[0m\e[1;93m Account (leave it blank to use your account): \e[0m' user_account
-
-user_account="${user_account:-${default_user}}"
-get_following
-elif [[ $option -eq 6 ]]; then
-
-login_user
-default_user=$user
-
- 
-read -p $'\e[1;31m[\e[0m\e[1;77m+\e[0m\e[1;31m]\e[0m\e[1;93m Account (leave it blank to use your account): \e[0m' user_account
-
-user_account="${user_account:-${default_user}}"
-total_followers
-
-
-elif [[ $option -eq 7 ]]; then
-login_user
-get_info
-
-elif [[ $option -eq 8 ]]; then
-
-login_user
-unfollower
-
+elif [[ $option -eq 2 ]]; then
+esc
 else
 
 printf "\e[1;93m[!] Invalid Option!\e[0m\n"
