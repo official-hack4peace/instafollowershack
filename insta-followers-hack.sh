@@ -660,7 +660,7 @@ unfollower
 
 else
 
-printf "\e[91m Invalid Option!!\e[0m""
+printf "\e[91m Invalid Option!!\e[0m"
 sleep 2
 menu
 
