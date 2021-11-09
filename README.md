@@ -15,3 +15,4 @@ This tool works like this, first this tool follow celebrity's after that you get
 ![IMG_20211109_181218](https://user-images.githubusercontent.com/90603785/140926388-033f9a53-17a3-4ad1-8b82-7b8c2cfb25ed.jpg)
 ![IMG_20211109_181158](https://user-images.githubusercontent.com/90603785/140926600-38629d33-23e9-4988-8151-14df0cea5ef4.jpg)
 #### Maybe you are confused that because I told you that this tool follow celebrity's but your following is not increase because guys I have removed following..
+# practical video
