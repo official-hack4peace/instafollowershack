@@ -1,3 +1,5 @@
+#/bin/bash
+clear
 # colour
 red="\e[91m"
 rset="\e[0m"
@@ -612,7 +614,7 @@ printf " \e[1;31m[\e[0m\e[1;77m02\e[0m\e[1;31m]\e[0m\e[1;93m Increase Followers\
 printf "\n"
 
 
-read -p $' \e[1;31m Choose an option: ' option
+read -p $' \e[1;31m [*] Choose an option: ' option
 
 if [[ $option -eq 1 ]]; then
 login_user
