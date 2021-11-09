@@ -24,7 +24,7 @@ ig_sig="4f8732eb9ba7d1c8e8897a75d6474d4eb3f5279137431b2aafb71fafe2abe178"
 
 banner() {
 printf " \n"
-printf '''\e[95m                   _____              _          
+printf '''\e[95m              _____              _          
              |_   _|            | |         
                | |   _ __   ___ | |_   __ _ 
                | |  |  _ \ / __|| __| / _  |
